@@ -1,0 +1,52 @@
+openapi: 3.0.3
+info:
+  title: Starter Project 1.0
+  description: |-
+    This is a Starter Project API Server based on the OpenAPI 3.0 specification,
+    See https://www.gitlab.com/hu_adsd/starter for more information.
+  termsOfService: https://www.hu.nl/contact
+  contact:
+    email: adsd@hu.nl
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+externalDocs:
+  description: Find out more about Swagger
+  url: https://gitlab.com/hu_adsd/starter
+servers:
+  - url: http://localhost:8080
+  - url: https://starter.adsd.hu.nl
+tags:
+  - name: greeting
+    description: Everything about your Greetings
+paths:
+  /greeting/random:
+    get:
+      tags:
+        - greeting
+      summary: Retrieve a random greeting
+      description: A random greeting with the given name filled in
+      operationId: getGreeting
+      parameters:
+        - name: name
+          in: query
+          description: The name for the recipient
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful greeting retrieval
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Greeting'
+components:
+  schemas:
+    Greeting:
+      type: object
+      properties:
+        text:
+          type: string
+          example: Hi henk

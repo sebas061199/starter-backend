@@ -33,8 +33,8 @@ Install IntelliJ Ultimate for Students
 * [Download IntelliJ](https://www.jetbrains.com/idea/download)
 
 ### GitLab
-Make sure you have a GitLab account and your [SSH key setup](https://docs.gitlab.com/ee/user/ssh.html).
-Fork the project from GitLab https://gitlab.com/adsd_hu/starter-backend/-/forks/new
+Make sure you have a Bitbucket account and your [SSH key setup](https://support.atlassian.com/bitbucket-cloud/docs/configure-ssh-and-two-step-verification/).
+Import the [starter-backend project on gitlab](https://gitlab.com/adsd_hu/starter-backend/-/forks/new) to your own (or team) bitbucket.
 
 Clone the project using:
 * command-line `git clone <your-project>` and open the directory as a new project in IntelliJ
